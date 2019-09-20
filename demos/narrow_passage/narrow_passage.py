@@ -175,9 +175,10 @@ def main():
         mode = 'RRT*'
     success_count = 0
     ss = PassageStateSpace(width=60, height=30)
-    start = PassageState(ss, list(start), env=map2d)
+    start_val = list(start)
     goal = PassageState(ss, list(goal), env=map2d)
     for i in range(args.n_test_rounds):
+        start = PassageState(ss, start_val, env=map2d)
         if args.use_hmm or args.use_rnn:
             planner = DeRRTStar(ss, args.steer_dist, args.n_samples, model, n_resample=40)
         else:
