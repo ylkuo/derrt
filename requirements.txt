@@ -2,7 +2,7 @@ descartes==1.1.0
 hmmlearn==0.2.2
 matplotlib==3.0.2
 numpy==1.16.0
-opencv-python==4.0.0.21
+opencv-python==4.2.0.32
 Pillow==8.3.2
 pygame==1.9.4
 scikit-image==0.15.0
